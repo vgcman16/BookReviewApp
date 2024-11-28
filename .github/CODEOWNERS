@@ -1,0 +1,21 @@
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# @vgcman16 will be requested for review when someone opens a pull request.
+*       @vgcman16
+
+# Order is important; the last matching pattern takes the most
+# precedence.
+
+# Core app files
+/src/*                  @vgcman16
+/ios/*                  @vgcman16
+/android/*              @vgcman16
+
+# Configuration files
+*.json                  @vgcman16
+*.yml                   @vgcman16
+*.yaml                  @vgcman16
+
+# Documentation
+*.md                    @vgcman16
+/docs/                  @vgcman16
