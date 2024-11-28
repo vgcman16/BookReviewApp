@@ -40,10 +40,16 @@ jobs:
         node-version: '18'
         cache: 'npm'
     
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+        bundler-cache: true
+    
     - name: Install dependencies
       run: |
         npm ci
-        cd ios && pod install
+        cd ios && pod install --repo-update
         
     - name: Build iOS
       run: |
@@ -52,8 +58,10 @@ jobs:
           -scheme BookReviewApp \
           -configuration Debug \
           -sdk iphonesimulator \
-          -destination "platform=iOS Simulator,name=iPhone 16 Pro,OS=17.2" \
+          -destination "platform=iOS Simulator,name=iPhone 14" \
           CODE_SIGN_IDENTITY="" \
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGNING_ALLOWED=NO \
+          GCC_PREPROCESSOR_DEFINITIONS='$GCC_PREPROCESSOR_DEFINITIONS COCOAPODS=1' \
+          HEADER_SEARCH_PATHS='$(inherited) ${PODS_ROOT}/Headers/Public/gRPC-Core ${PODS_ROOT}/Headers/Public/gRPC-C++' \
           build
