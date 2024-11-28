@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v3
     
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v3
       with:
         node-version: '18'
         cache: 'npm'
@@ -29,13 +29,13 @@ jobs:
       run: npm test || true
 
   ios:
-    runs-on: macos-latest
+    runs-on: macos-14
     
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v3
     
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v3
       with:
         node-version: '18'
         cache: 'npm'
@@ -48,4 +48,4 @@ jobs:
     - name: Build iOS
       run: |
         cd ios
-        xcodebuild -workspace BookReviewApp.xcworkspace -scheme BookReviewApp -configuration Debug -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 15 Pro Max" build
+        xcodebuild -workspace BookReviewApp.xcworkspace -scheme BookReviewApp -configuration Debug -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 16 Pro,OS=18.1" build
