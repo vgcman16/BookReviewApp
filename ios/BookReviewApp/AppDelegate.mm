@@ -6,8 +6,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  // Initialize Firebase
-  [FIRApp configure];
+  // Initialize Firebase before anything else
+  if ([FIRApp defaultApp] == nil) {
+    [FIRApp configure];
+  }
   
   self.moduleName = @"BookReviewApp";
   // You can add your custom initial props in the dictionary below.
