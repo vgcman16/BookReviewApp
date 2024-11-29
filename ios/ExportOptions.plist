@@ -10,7 +10,7 @@
     <string>automatic</string>
     <key>provisioningProfiles</key>
     <dict>
-        <key>com.zq78724vb2.bookreviewapp</key>
+        <key>org.reactjs.native.example.BookReviewApp</key>
         <string>BookReviewApp App Store Profile</string>
     </dict>
     <key>stripSwiftSymbols</key>
