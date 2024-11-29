@@ -1,3 +1,20 @@
+#!/bin/bash
+
+# Set the source image path
+SOURCE_IMAGE="BookReviewApp/Images.xcassets/AppIcon_Base.png"
+OUTPUT_DIR="BookReviewApp/Images.xcassets/AppIcon.appiconset"
+
+# Array of required sizes for iOS app icons
+SIZES=(20 29 40 58 60 76 80 87 120 152 167 180 1024)
+
+# Generate icons
+for size in "${SIZES[@]}"
+do
+    sips -Z $size "$SOURCE_IMAGE" --out "$OUTPUT_DIR/icon_${size}x${size}.png"
+done
+
+# Create Contents.json
+cat > "$OUTPUT_DIR/Contents.json" << 'EOL'
 {
   "images" : [
     {
@@ -114,3 +131,4 @@
     "author" : "xcode"
   }
 }
+EOL

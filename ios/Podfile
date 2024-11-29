@@ -24,6 +24,12 @@ target 'BookReviewApp' do
   pod 'gRPC-Core', :modular_headers => true
   pod 'gRPC-C++', :modular_headers => true
 
+  # Firebase pods
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
+
   use_react_native!(
     :path => config[:reactNativePath],
     :hermes_enabled => true,
