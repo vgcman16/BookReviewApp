@@ -91,8 +91,9 @@ export const getUserReadingList = async (userId: string) => {
       .collection(COLLECTIONS.READING_LISTS)
       .doc(userId)
       .get();
-    
-    return doc.exists ? doc.data().books : [];
+
+    const data = doc.data();
+    return doc.exists ? data?.books || [] : [];
   } catch (error) {
     throw error;
   }
