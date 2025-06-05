@@ -62,11 +62,9 @@ npx react-native run-android
 
 ```
 src/
-├── navigation/     # Navigation configuration
-├── screens/        # Screen components
-├── components/     # Reusable components
-├── services/       # API and Firebase services
-└── utils/         # Utility functions
+├── config/      # Firebase and other configuration
+├── navigation/  # Application navigation setup
+└── screens/     # Screen components
 ```
 
 ## Contributing
