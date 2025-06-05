@@ -19,6 +19,8 @@ A cross-platform mobile application for book lovers to discover, review, and sha
 - Cloud Firestore
 - Google Books API
 - React Navigation
+- Node.js & Express
+- MongoDB
 
 ## Getting Started
 
@@ -57,6 +59,20 @@ npx react-native run-ios
 # Android
 npx react-native run-android
 ```
+
+## Backend server (optional)
+
+The `backend/` directory contains a simple Node.js/Express service for
+persisting book reviews. Start it separately if you want to use the REST API.
+
+```bash
+cd backend
+npm install
+npm start
+```
+
+Ensure `MONGODB_URI` is set in your environment to point to your MongoDB
+instance.
 
 ## Project Structure
 
