@@ -14,14 +14,12 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/bookreview', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
-  console.log('Connected to MongoDB');
-}).catch((err) => {
-  console.error('MongoDB connection error:', err);
-});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/bookreview')
+  .then(() => {
+    console.log('Connected to MongoDB');
+  }).catch((err) => {
+    console.error('MongoDB connection error:', err);
+  });
 
 // Book Schema
 const bookSchema = new mongoose.Schema({
