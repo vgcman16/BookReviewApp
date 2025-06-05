@@ -22,7 +22,11 @@ const ProfileScreen = ({ navigation }) => {
   const fetchUserData = async () => {
     try {
       const userId = auth().currentUser?.uid;
-      
+      if (!userId) {
+        navigation.replace('Auth');
+        return;
+      }
+
       // Fetch user's reviews
       const reviewsSnapshot = await firestore()
         .collection('reviews')
