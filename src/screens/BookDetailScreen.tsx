@@ -40,6 +40,10 @@ const BookDetailScreen = ({ route, navigation }) => {
   const checkReadingList = async () => {
     try {
       const userId = auth().currentUser?.uid;
+      if (!userId) {
+        navigation.replace('Auth');
+        return;
+      }
       const readingListDoc = await firestore()
         .collection('readingLists')
         .doc(userId)
@@ -55,6 +59,10 @@ const BookDetailScreen = ({ route, navigation }) => {
   const submitReview = async () => {
     try {
       const userId = auth().currentUser?.uid;
+      if (!userId) {
+        navigation.replace('Auth');
+        return;
+      }
       await firestore().collection('reviews').add({
         bookId: book.id,
         userId,
@@ -75,6 +83,10 @@ const BookDetailScreen = ({ route, navigation }) => {
   const toggleReadingList = async () => {
     try {
       const userId = auth().currentUser?.uid;
+      if (!userId) {
+        navigation.replace('Auth');
+        return;
+      }
       const readingListRef = firestore().collection('readingLists').doc(userId);
       
       if (isInReadingList) {

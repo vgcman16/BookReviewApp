@@ -21,6 +21,10 @@ const ReadingListScreen = ({ navigation }) => {
   const fetchReadingList = async () => {
     try {
       const userId = auth().currentUser?.uid;
+      if (!userId) {
+        navigation.replace('Auth');
+        return;
+      }
       const readingListDoc = await firestore()
         .collection('readingLists')
         .doc(userId)
@@ -49,6 +53,10 @@ const ReadingListScreen = ({ navigation }) => {
   const removeFromReadingList = async (bookId) => {
     try {
       const userId = auth().currentUser?.uid;
+      if (!userId) {
+        navigation.replace('Auth');
+        return;
+      }
       await firestore()
         .collection('readingLists')
         .doc(userId)
