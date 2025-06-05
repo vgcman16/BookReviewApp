@@ -135,7 +135,8 @@ const BookDetailScreen = ({ route, navigation }) => {
                 color="#FFD700"
               />
             </TouchableOpacity>
-          ))}
+          ))
+        }
         </View>
         <TextInput
           style={styles.reviewInput}
@@ -163,7 +164,8 @@ const BookDetailScreen = ({ route, navigation }) => {
             </View>
             <Text style={styles.reviewText}>{review.review}</Text>
           </View>
-        ))}
+        ))
+      }
       </View>
     </ScrollView>
   );
