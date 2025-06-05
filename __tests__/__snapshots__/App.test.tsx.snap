@@ -1,0 +1,276 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RNCSafeAreaProvider
+  onInsetsChange={[Function]}
+  style={
+    [
+      {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <RNSScreenStack
+    style={
+      {
+        "flex": 1,
+      }
+    }
+  >
+    <RNSScreen
+      accessibilityElementsHidden={false}
+      activityState={2}
+      collapsable={false}
+      fullScreenSwipeShadowEnabled={true}
+      gestureResponseDistance={
+        {
+          "bottom": -1,
+          "end": -1,
+          "start": -1,
+          "top": -1,
+        }
+      }
+      hasLargeHeader={false}
+      importantForAccessibility="auto"
+      nativeBackButtonDismissalEnabled={false}
+      onAppear={[Function]}
+      onDisappear={[Function]}
+      onDismissed={[Function]}
+      onGestureCancel={[Function]}
+      onHeaderBackButtonClicked={[Function]}
+      onHeaderHeightChange={[Function]}
+      onNativeDismissCancelled={[Function]}
+      onSheetDetentChanged={[Function]}
+      onTransitionProgress={[Function]}
+      onWillAppear={[Function]}
+      onWillDisappear={[Function]}
+      replaceAnimation="push"
+      sheetAllowedDetents={
+        [
+          1,
+        ]
+      }
+      sheetCornerRadius={-1}
+      sheetElevation={24}
+      sheetExpandsWhenScrolledToEdge={true}
+      sheetGrabberVisible={false}
+      sheetInitialDetent={0}
+      sheetInitialDetentIndex={0}
+      sheetLargestUndimmedDetent={-1}
+      sheetLargestUndimmedDetentIndex={-1}
+      stackPresentation="push"
+      style={
+        {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "zIndex": undefined,
+        }
+      }
+      swipeDirection="horizontal"
+    >
+      <RNSScreenContentWrapper
+        collapsable={false}
+        style={
+          [
+            {
+              "flex": 1,
+            },
+            [
+              {
+                "backgroundColor": "rgb(242, 242, 242)",
+              },
+              undefined,
+            ],
+          ]
+        }
+      >
+        <View
+          style={
+            {
+              "backgroundColor": "#fff",
+              "flex": 1,
+              "justifyContent": "center",
+              "padding": 20,
+            }
+          }
+        >
+          <Text
+            style={
+              {
+                "fontSize": 24,
+                "fontWeight": "bold",
+                "marginBottom": 20,
+                "textAlign": "center",
+              }
+            }
+          >
+            Sign In
+          </Text>
+          <TextInput
+            autoCapitalize="none"
+            onChangeText={[Function]}
+            placeholder="Email"
+            style={
+              {
+                "borderColor": "#ddd",
+                "borderRadius": 5,
+                "borderWidth": 1,
+                "marginBottom": 10,
+                "padding": 10,
+              }
+            }
+            value=""
+          />
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="Password"
+            secureTextEntry={true}
+            style={
+              {
+                "borderColor": "#ddd",
+                "borderRadius": 5,
+                "borderWidth": 1,
+                "marginBottom": 10,
+                "padding": 10,
+              }
+            }
+            value=""
+          />
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "backgroundColor": "#007AFF",
+                "borderRadius": 5,
+                "marginTop": 10,
+                "opacity": 1,
+                "padding": 15,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#fff",
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              Sign In
+            </Text>
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#007AFF",
+                  "marginTop": 20,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Don't have an account? Sign Up
+            </Text>
+          </View>
+        </View>
+      </RNSScreenContentWrapper>
+      <RNSScreenStackHeaderConfig
+        backButtonInCustomView={false}
+        backTitleFontFamily="System"
+        backTitleVisible={true}
+        backgroundColor="rgb(255, 255, 255)"
+        color="rgb(0, 122, 255)"
+        direction="ltr"
+        disableBackButtonMenu={false}
+        hidden={true}
+        hideBackButton={false}
+        largeTitleFontFamily="System"
+        largeTitleFontWeight="700"
+        largeTitleHideShadow={false}
+        pointerEvents="box-none"
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "position": "absolute",
+            "top": "-100%",
+            "width": "100%",
+          }
+        }
+        title="Auth"
+        titleColor="rgb(28, 28, 30)"
+        titleFontFamily="System"
+        titleFontWeight="600"
+        topInsetEnabled={false}
+        translucent={false}
+      />
+    </RNSScreen>
+  </RNSScreenStack>
+</RNCSafeAreaProvider>
+`;
